@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMC 850</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body>
+
+    <h3>BMC 850</h3>
+    <img src="https://media1.andreaslundblad.se/2016/06/DSC_0015.jpeg" alt="Imagem do BMC 850 em Vermelho">
+    <p>Preço - 36 28€</p>
+
+    <h4>Características técnicas</h4>
+    <ul>
+        <li>Cilindrada: 1.5cc.</li>
+        <li>Potência: 95cv.</li>
+        <li>Caixa manual de 5 velocidades.</li>
+        <li>Peso: 1.259 kg.</li>
+        <li>Velocidade máxima: 170 km/h.</li>
+    </ul> 
+
+    <form id="purchaseForm">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="address">Morada:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="taxId">Identificação Fiscal:</label>
+        <input type="text" id="taxId" name="taxId" required>
+
+        <label for="bankInfo">Dados Bancários:</label>
+        <input type="text" id="bankInfo" name="bankInfo" required>
+
+        <button type="button" onclick="processPurchase()">Comprar</button>
+    </form>
+
+    <a href="Página principal.html">Voltar à página inicial</a>
+
+    <script>
+        function processPurchase() {
+            var name = document.getElementById('name').value;
+            var address = document.getElementById('address').value;
+            var taxId = document.getElementById('taxId').value;
+            var bankInfo = document.getElementById('bankInfo').value;
+
+            if (name && address && taxId && bankInfo) {
+                alert("Obrigado pela compra, " + name + "!");
+            } else {
+                alert("Por favor, preencha todos os campos do formulário.");
+            }
+        }
+    </script>
+</body>
+
+</html>

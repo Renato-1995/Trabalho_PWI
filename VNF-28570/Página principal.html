@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stand dos Clássicos</title>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+
+<body onload="initPage()" onload="usajs()">
+    <h1>Stand dos Clássicos</h1>
+    <h2>Selecione o modelo que pretende consultar</h2>
+
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td>
+                <h3><a href="Carro1.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+            <td>
+                <h3><a href="Carro2.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+            <td>
+                <h3><a href="Carro3.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3><a href="Carro4.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+            <td>
+                <h3><a href="Carro5.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+            <td>
+                <h3><a href="Carro6.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3><a href="Carro7.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+            <td>
+                <h3><a href="Carro8.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+            <td>
+                <h3><a href="Carro9.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <h3><a href="Carro10.html"></a></h3>
+                <img src="" alt="">
+                <p></p>
+            </td>
+        </tr>
+    </table>
+
+    <div id="totalValorStand"></div>
+    <div id="totalDisponiveis"></div>
+    <div id="totalReservados"></div>
+    <div id="totalVendidos"></div>
+    <div id="custoTotalCompras"></div>
+
+
+    </body>
+    </html>
+    
+    <script>
+var carros = [
+    { nome: "Alfa Romeo 1750", url: "https://www.acp.pt/ResourcesUser/ACP/img_lista/ACP-Classicos-Historia-Alfa-Romeo-1750-GTV-lista.jpg", preco: 20459, estado: "Disponível", quantidade: 3, km: 50000, ano: 1970 },
+    { nome: "BMC 850", url: "https://media1.andreaslundblad.se/2016/06/DSC_0015.jpeg", preco: 3628, estado: "Disponível", quantidade: 5, km: 75000, ano: 1968 },
+    { nome: "Citroen 2 CV", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Citroen_2CV_1X7A7979.jpg/280px-Citroen_2CV_1X7A7979.jpg", preco: 17859, estado: "Disponível", quantidade: 4, km: 80000, ano: 1965 },
+    { nome: "Fiat 124", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Fiat_124-Sedan_Front-view.JPG/640px-Fiat_124-Sedan_Front-view.JPG", preco: 21863, estado: "Disponível", quantidade: 2, km: 60000, ano: 1969 },
+    { nome: "Ford Cortina", url: "https://images.pistonheads.com/nimg/46797/mceu_43298073111675682337646.jpg", preco: 19827, estado: "Disponível", quantidade: 3, km: 55000, ano: 1971 },
+    { nome: "Honda N360", url: "https://assets.catawiki.com/image/cw_normal/plain/assets/catawiki/assets/2023/8/24/5/0/a/50abb220-009d-459c-bea4-2cf16ef5fa55.jpg", preco: 31564, estado: "Disponível", quantidade: 4, km: 65000, ano: 1967 },
+    { nome: "Jaguar Mark II", url: "https://upload.wikimedia.org/wikipedia/commons/c/cd/Jaguar.3point4.750pix.jpg", preco: 53725, estado: "Disponível", quantidade: 1, km: 45000, ano: 1964 },
+    { nome: "Jeep Willys", url: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Willys_Jeep_1943.jpg/300px-Willys_Jeep_1943.jpg", preco: 47824, estado: "Disponível", quantidade: 2, km: 30000, ano: 1950 },
+    { nome: "Mercedes 220b", url: "https://assets.catawiki.com/image/cw_normal/plain/assets/catawiki/assets/2017/3/21/b/2/8/b28310f6-0e35-11e7-8013-b97dd640e19e.jpg", preco: 49245, estado: "Disponível", quantidade: 3, km: 40000, ano: 1960 },
+    { nome: "MGA 1500", url: "https://collectingcars.imgix.net/014963/MMP-220930-31.jpg?w=1263&fit=fillmax&crop=edges&auto=format,compress&cs=srgb&q=85", preco: 41968, estado: "Disponível", quantidade: 2, km: 70000, ano: 1959 }
+];
+
+    
+    var totalVendidos = 0;
+    var custoTotalCompras = 0;
+    var totalReservados = 0;
+    var totalDisponiveis = 0;
+    
+    function usajs() {
+    var caixatabela = document.querySelectorAll('table tr td');
+    caixatabela.forEach(function(cell, index) {
+        if (index < carros.length) {
+            var carro = carros[index];
+            var htmlCarro = `
+                <h3><a href="Carro${index + 1}.html">${carro.nome}</a></h3>
+                <img src="${carro.url}" alt="Imagem do ${carro.nome}">
+                <p>Preço - ${carro.preco}€ | Estado: ${carro.estado} | Qtd: ${carro.quantidade} | Km: ${carro.km} | Ano: ${carro.ano}</p>
+                <input type="number" id="quantidade${index}" value="1" min="1" max="${carro.quantidade}">
+                <button onclick="reservarOuComprarCarro(${index}, document.getElementById('quantidade${index}').value, 'reservar')">Reservar</button>
+                <button onclick="reservarOuComprarCarro(${index}, document.getElementById('quantidade${index}').value, 'comprar')">Comprar</button>
+            `;
+            cell.innerHTML = htmlCarro;
+        }
+    });
+}
+        function reservarOuComprarCarro(index, qtd, acao) {
+    if (index >= 0 && index < carros.length) {
+        var carro = carros[index];
+        qtd = parseInt(qtd); // Certifique-se de que qtd é um número
+
+        if (carro.quantidade >= qtd) {
+            if (acao === 'reservar' && carro.estado === 'Disponível') {
+                carro.quantidade -= qtd;
+                carro.estado = 'Reservado';
+                totalReservados += qtd; // Atualiza total de reservados apenas se o carro for reservado com sucesso
+                alert(`Você reservou ${qtd} unidade(s) do ${carro.nome}.`);
+            } else if (acao === 'comprar') {
+                carro.quantidade -= qtd;
+                carro.estado = 'Vendido';
+                totalVendidos += qtd; // Atualiza total de vendidos
+                custoTotalCompras += carro.preco * qtd; // Atualiza custo total de compras
+                alert(`Você comprou ${qtd} unidade(s) do ${carro.nome}. Total a pagar: ${carro.preco * qtd}€.`);
+            }
+
+            atualizarTotais();
+        } else {
+            alert("Quantidade insuficiente em estoque.");
+        }
+    }
+}
+
+function atualizarTotais() {
+    calcularTotais();
+    usajs(); // Essa função irá repopular a tabela com os dados atualizados
+}
+
+function calcularTotais() {
+    var totalValor = 0;
+    totalReservados = 0; // Resetar o contador de reservados
+    totalDisponiveis = 0; // Resetar o contador de disponíveis
+
+    carros.forEach(carro => {
+        if (carro.estado === "Disponível") {
+            totalValor += carro.preco * carro.quantidade;
+            totalDisponiveis += carro.quantidade;
+        } else if (carro.estado === "Reservado") {
+            totalReservados += carro.quantidade;
+        }
+    });
+
+    document.getElementById("totalValorStand").innerHTML = `Valor Total do Stand: ${totalValor}€`;
+    document.getElementById("totalReservados").innerHTML = `Total de Carros Reservados: ${totalReservados}`;
+    document.getElementById("totalDisponiveis").innerHTML = `Total de Carros Disponíveis: ${totalDisponiveis}`;
+    document.getElementById("totalVendidos").innerHTML = `Total de Carros Vendidos: ${totalVendidos}`;
+    document.getElementById("custoTotalCompras").innerHTML = `Custo Total das Compras: ${custoTotalCompras}€`;
+}
+
+function initPage() {
+    usajs();
+    calcularTotais();
+}
+
+window.onload = initPage;
+
+    </script>
+    
+</body>
+
+</html>
