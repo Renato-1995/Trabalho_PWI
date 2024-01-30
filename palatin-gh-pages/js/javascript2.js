@@ -47,6 +47,7 @@ window.onload = function () {
 
     maxReservations[tipoQuarto]--;
   }
+  
 //Reservas em sistema
   const reservaFicticia1 = {
     checkin: '2024-02-01',

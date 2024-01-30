@@ -112,7 +112,7 @@
     
 
     <!-- ##### Título ##### -->
-    <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/villa.jpg);">
+    <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/villa.webp);">
         <div class="bradcumbContent">
             <h2>Reservar Agora</h2>
         </div>
@@ -157,28 +157,40 @@
                                         <input type="number" id="adultos" class="form-control" name="adultos" required>
                                         <!--Criancas-->
                                         <label for="criancas">Crianças</label>
-                                        <input type="number" id="criancas" class="form-control" name="criancas" required>
+                                        <input type="number" id="criancas" class="form-control" name="criancas">
 
                                     <!--Suites-->
                                     <h4 class="m-4">Seleção de Suítes ou Villas</h4>
-                                    <p>Suítes</p>
-                                        <div class="d-flex justify-content-center">
+                                        <button class="btn btn-palatin m-2" type="button" data-toggle="collapse" data-target="#SuitesSelect"
+                                            aria-expanded="false" aria-controls="SuitesSelect">
+                                            Suítes
+                                        </button>
+                                      <div class="collapse m-5" id="SuitesSelect">
+                                        <div class="card card-body">
                                             <select id="tipoSuite" class="mb-3 mx-auto" name="tipoQuarto" required>
-                                                <option value="NoSuite">Não quero!</option>
+                                                <option value="NoSuite">Selecione uma opção</option>
                                                 <option value="suiteSingle">Suíte Single</option>
                                                 <option value="suiteCasal">Suíte Casal</option>
                                                 <option value="suiteFam">Suíte Familiar</option>
                                             </select>
                                         </div>
-                                        <p>Villas</p>
-                                        <div class="d-flex justify-content-center">
+                                      </div>
+
+                                      <!--Villas-->
+                                      <button class="btn btn-palatin m-2" type="button" data-toggle="collapse" data-target="#VillaSelect"
+                                            aria-expanded="false" aria-controls="VillaSelect">
+                                            Villas
+                                        </button>
+                                      <div class="collapse m-5" id="VillaSelect">
+                                        <div class="card card-body">
                                             <select id="tipoVilla" class="mb-3 mx-auto" name="tipoVilla" required>
-                                                <option value="NoVilla">Não quero!</option>
+                                                <option value="NoVilla">Selecione uma opção</option>
                                                 <option value="villaSingle">Villa Single</option>
                                                 <option value="villaCasal">Villa Casal</option>
                                                 <option value="villaFam">Villa Familiar</option>
                                             </select>
                                         </div>
+                                      </div>
 
                                         <div>
                                             <button id="botao-reserva" class="btn-lg m-5" type="submit">Simular Preço</button>
