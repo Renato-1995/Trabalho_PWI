@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <!-- Title -->
+    <title>Gestão | Elite Grand Hotel</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="img/core-img/icon.png">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css">
+
+
+    <style>
+        .table-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 30vh;
+            /* 100% da altura da viewport, ajuste conforme necessário */
+        }
+
+        #GestaoTable {
+            width: 100%;
+            max-width: 800px;
+        }
+
+        #GestaoTable .cancelar-btn {
+            margin: 2px;
+        }
+
+        #GestaoTable td {
+            padding: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="cssload-container">
+            <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
+        </div>
+    </div>
+
+    <!-- ##### Header Area Start ##### -->
+    <header class="header-area">
+        <!-- Navbar Area -->
+        <div class="palatin-main-menu">
+            <div class="classy-nav-container breakpoint-off">
+                <div class="container">
+                    <!-- Menu -->
+                    <nav class="classy-navbar justify-content-between" id="palatinNav">
+
+                        <!-- Nav brand -->
+                        <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
+
+                        <!-- Navbar Toggler -->
+                        <div class="classy-navbar-toggler">
+                            <span class="navbarToggler"><span></span><span></span><span></span></span>
+                        </div>
+
+                        <!-- Menu -->
+                        <div class="classy-menu">
+
+                            <!-- close btn -->
+                            <div class="classycloseIcon">
+                                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+                            </div>
+
+                            <!-- Cabeçalho -->
+                            <header class="header-area">
+                                <!-- Navbar Area -->
+                                <div class="palatin-main-menu">
+                                    <div class="classy-nav-container breakpoint-off">
+                                        <div class="container">
+                                            <!-- Menu -->
+                                            <nav class="classy-navbar justify-content-between" id="palatinNav">
+
+                                                <!-- logotipo da barra de navegaçao -->
+                                                <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png"
+                                                        alt=""></a>
+
+                                                <!-- Navbar Toggler -->
+                                                <div class="classy-navbar-toggler">
+                                                    <span
+                                                        class="navbarToggler"><span></span><span></span><span></span></span>
+                                                </div>
+
+                                                <!-- Menu -->
+                                                <div class="classy-menu">
+
+                                                    <!-- close btn -->
+                                                    <div class="classycloseIcon">
+                                                        <div class="cross-wrap"><span class="top"></span><span
+                                                                class="bottom"></span></div>
+                                                    </div>
+
+                                                    <!-- Nav Start -->
+                                                    <div class="classynav">
+                                                        <ul>
+                                                            <li class="active"><a href="index.html">Página Inicial</a>
+                                                            </li>
+                                                            <li><a href="about-us.html">Sobre Nós</a></li>
+                                                            <li><a href="#">Galeria de Fotos</a>
+                                                                <ul class="dropdown">
+                                                                    <li><a href="Hotel.html">O nosso Hotel </a></li>
+                                                                    <li><a href="rooms.html">Quartos </a></li>
+                                                                    <li><a href="gastronomia.html"> Gastronomia </a>
+                                                                    </li>
+                                                                </ul>
+                                                            </li>
+                                                            <li><a href="blog.html">Atividades</a>
+
+                                                            <li><a href="services.html">Serviços</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </header>
+                            <!-- Fim do cabeçalho -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ##### Header Area End ##### -->
+
+
+
+    <!-- ##### Título ##### -->
+    <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center"
+        style="background-image: url(img/bg-img/villa.webp);">
+        <div class="bradcumbContent">
+            <h2>Gestão Elite Grand Hotel</h2>
+        </div>
+    </section>
+
+    <!-- ##### Título ##### -->
+    <section class="rooms-area section-padding-0-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-lg-8">
+                    <div class="section-heading text-center">
+                        <div class="line-"></div>
+                        <h2 class="m-5">Últimas Reservas</h2>
+
+                        <!--### Tabela-->
+                        <div class="table-container">
+                            <table class="table table-bordered  text-center" id="GestaoTable">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th scope="col">Número</th>
+                                        <th scope="col">Nome</th>
+                                        <th scope="col">Email</th>
+                                        <th scope="col">Número de Telemóvel</th>
+                                        <th scope="col">Check-In</th>
+                                        <th scope="col">Check-Out</th>
+                                        <th scope="col">Adultos</th>
+                                        <th scope="col">Crianças</th>
+                                        <th scope="col">Tipo de Suíte</th>
+                                        <th scope="col">Tipo de Villa</th>
+                                        <th scope="col">Preço</th>
+                                        <th scope="col">Cancelamento</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+
+
+
+                        <!-- ##### All Javascript Script ##### -->
+                        <!-- jQuery-2.2.4 js -->
+                        <script src="js/jquery/jquery-2.2.4.min.js"></script>
+                        <!-- Popper js -->
+                        <script src="js/bootstrap/popper.min.js"></script>
+                        <!-- Bootstrap js -->
+                        <script src="js/bootstrap/bootstrap.min.js"></script>
+                        <!-- All Plugins js -->
+                        <script src="js/plugins/plugins.js"></script>
+                        <!-- Active js -->
+                        <script src="js/active.js"></script>
+
+                        <script src="js/javascript2.js"></script>
+
+
+
+
+</body>
+
+</html>
