@@ -2,7 +2,7 @@ window.onload = function () {
   const form = document.querySelector("form");
 
   // Array para armazenar as reservas
-  const reservas = [];
+   reservas = [];
 
   // Função para verificar se a data de check-in é anterior à data de check-out
   function DataVerificar(checkin, checkout) {
