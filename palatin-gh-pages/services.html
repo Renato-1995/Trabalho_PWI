@@ -1,33 +1,117 @@
-<!DOCTYPE html>
-<html lang="en">
+    <!DOCTYPE html>
+    <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <!-- Title -->
-    <title>The Palatin - Hotel &amp; Resort Template</title>
+        <!-- Title -->
+        <title>The Palatin - Hotel &amp; Resort Template</title>
 
-    <!-- Favicon -->
-    <link rel="icon" href="img/core-img/favicon.ico">
+        <!-- Favicon -->
+        <link rel="icon" href="img/core-img/favicon.ico">
 
-    <!-- Core Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+        <!-- Core Stylesheet -->
+        <link rel="stylesheet" href="style.css">
 
-</head>
+        <style>
+/* Estilos gerais */
+.clear-section {
+    clear: both;
+}
 
-<body>
-    <!-- Preloader -->
-    <div class="preloader d-flex align-items-center justify-content-center">
+/* Estilos para a seção 'Serviços Fantásticos' */
+.services-intro {
+    padding-top: 100px; /* Ajuste conforme necessário para o seu cabeçalho */
+    margin-top: 0; /* Remove margem superior se houver */
+}
+
+/* Estilos para o cabeçalho da seção */
+.section-heading {
+    margin-bottom: 20px;
+}
+
+.section-heading h2 {
+    font-size: 2.5rem;
+    color: #555;
+}
+
+/* Utilize Flexbox para as colunas */
+.left-column, .right-column {
+    width: 50%;
+    display: flex;
+    align-items: center; /* Alinha verticalmente */
+    justify-content: center; /* Alinha horizontalmente */
+}
+
+
+.left-column img {
+    max-width: 100%;
+    height: auto;
+}
+
+.right-column {
+    padding: 2rem;
+    background-color: #f7f7f7; /* Uma cor clara para melhor contraste e legibilidade */
+}
+
+.service-intro-text {
+    margin: 0 3rem; /* Usando 'rem' ao invés de 'cm' */
+    text-align: left;
+    color: #333; /* Garanta que o texto seja de uma cor visível contra o fundo */
+}
+
+/* Estilos para o botão 'Read More' */
+#read-more-btn {
+    background-color: #a67c52;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    display: block;
+    width: fit-content; /* Faz com que o botão se ajuste ao conteúdo */
+    margin: 20px auto; /* Centraliza o botão horizontalmente e adiciona espaço acima */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    text-decoration: none; /* Remove a sublinhado do texto do botão */
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+    .left-column, .right-column {
+        width: 100%;
+    }
+
+    .service-intro-text {
+        margin: 1cm; /* Ajustado para dispositivos menores */
+    }
+}
+
+/* Transições suaves para o efeito cascata */
+.left-column img, .service-intro-text {
+    transition: transform 0.3s ease;
+}
+
+
+            </style>    
+
+
+        <!-- jQuery-2.2.4 js -->
+        <!--importante ficar em cima para ativar mal a página abra-->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    </head>
+
+    <body>
+     <!-- Preloader -->
+     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="cssload-container">
             <div class="cssload-loading"><i></i><i></i><i></i><i></i></div>
         </div>
     </div>
 
-    <!-- ##### Header Area Start ##### -->
+    <!-- Cabeçalho -->
     <header class="header-area">
         <!-- Navbar Area -->
         <div class="palatin-main-menu">
@@ -36,7 +120,7 @@
                     <!-- Menu -->
                     <nav class="classy-navbar justify-content-between" id="palatinNav">
 
-                        <!-- Nav brand -->
+                        <!-- logotipo da barra de navegaçao --> 
                         <a href="index.html" class="nav-brand"><img src="img/core-img/logo.png" alt=""></a>
 
                         <!-- Navbar Toggler -->
@@ -55,357 +139,286 @@
                             <!-- Nav Start -->
                             <div class="classynav">
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="about-us.html">About Us</a></li>
-                                    <li><a href="#">Pages</a>
+                                    <li class="active"><a href="index.html">Página Inicial</a></li>
+                                    <li><a href="about-us.html">Sobre Nós</a></li>
+                                    <li><a href="#">Galeria de Fotos</a>
                                         <ul class="dropdown">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a href="about-us.html">About Us</a></li>
-                                            <li><a href="services.html">Services</a></li>
-                                            <li><a href="rooms.html">Rooms</a></li>
-                                            <li><a href="blog.html">News</a></li>
-                                            <li><a href="contact.html">Contact</a></li>
-                                            <li><a href="elements.html">Elements</a></li>
+                                            <li><a href="Hotel.html">O nosso Hotel </a></li>
+                                            <li><a href="rooms.html">Quartos </a></li>
+                                            <li><a href="gastronomia.html"> Gastronomia </a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#">Mega Menu</a>
-                                        <div class="megamenu">
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="rooms.html">Rooms</a></li>
-                                                <li><a href="blog.html">News</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="elements.html">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="rooms.html">Rooms</a></li>
-                                                <li><a href="blog.html">News</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="elements.html">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="rooms.html">Rooms</a></li>
-                                                <li><a href="blog.html">News</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="elements.html">Elements</a></li>
-                                            </ul>
-                                            <ul class="single-mega cn-col-4">
-                                                <li><a href="index.html">Home</a></li>
-                                                <li><a href="about-us.html">About Us</a></li>
-                                                <li><a href="services.html">Services</a></li>
-                                                <li><a href="rooms.html">Rooms</a></li>
-                                                <li><a href="blog.html">News</a></li>
-                                                <li><a href="contact.html">Contact</a></li>
-                                                <li><a href="elements.html">Elements</a></li>
-                                            </ul>
-                                        </div>
-                                    </li>
-                                    <li class="active"><a href="services.html">Services</a></li>
-                                    <li><a href="contact.html">Contact</a></li>
+                                    <li><a href="blog.html">Atividades</a>                                
                                 </ul>
-
-                                <!-- Button -->
+                                <!-- Botão de Reserva -->
                                 <div class="menu-btn">
-                                    <a href="#" class="btn palatin-btn">Make a Reservation</a>
+                                    <a href="reservas.html" class="btn palatin-btn">Reservar</a>
                                 </div>
-
                             </div>
-                            <!-- Nav End -->
                         </div>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
-    <!-- ##### Header Area End ##### -->
+    <!-- Fim do cabeçalho -->
 
-    <!-- ##### Breadcumb Area Start ##### -->
-    <section class="breadcumb-area bg-img d-flex align-items-center justify-content-center" style="background-image: url(img/bg-img/bg-5.jpg);">
-        <div class="bradcumbContent">
-            <h2>Services</h2>
-        </div>
-    </section>
-    <!-- ##### Breadcumb Area End ##### -->
-
-    <!-- ##### Book Now Area Start ##### -->
-    <div class="book-now-area">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-12 col-lg-10">
-                    <div class="book-now-form">
-                        <form action="#">
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select1">Check In</label>
-                                <select class="form-control" id="select1">
-                                  <option>19 June</option>
-                                  <option>20 June</option>
-                                  <option>21 June</option>
-                                  <option>22 June</option>
-                                  <option>23 June</option>
-                                  <option>24 June</option>
-                                  <option>25 June</option>
-                                </select>
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select2">Check Out</label>
-                                <select class="form-control" id="select2">
-                                  <option>20 June</option>
-                                  <option>21 June</option>
-                                  <option>22 June</option>
-                                  <option>23 June</option>
-                                  <option>24 June</option>
-                                  <option>25 June</option>
-                                  <option>26 June</option>
-                                  <option>27 June</option>
-                                </select>
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select3">Adults</label>
-                                <select class="form-control" id="select3">
-                                  <option>02</option>
-                                  <option>03</option>
-                                  <option>04</option>
-                                  <option>05</option>
-                                  <option>06</option>
-                                </select>
-                            </div>
-
-                            <!-- Form Group -->
-                            <div class="form-group">
-                                <label for="select4">Childrens</label>
-                                <select class="form-control" id="select4">
-                                  <option>01</option>
-                                  <option>02</option>
-                                  <option>03</option>
-                                  <option>04</option>
-                                  <option>05</option>
-                                </select>
-                            </div>
-
-                            <!-- Button -->
-                            <button type="submit">Book Now</button>
-                        </form>
-                    </div>
+    <br>
+<!-- ##### Mostrar serviços ##### -->
+<section class="services-intro parallax-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section-heading text-center">
+                    <div class="line-"></div>
+                    <h2>Serviços Fantásticos</h2>
+                </div>
+                <!-- Botão 'Read More' -->
+                <div class="text-center">
+                    <button class="btn palatin-btn mt-50" id="read-more-btn">Read More</button>
+                </div>
+                <div id="amazing-services-text" class="collapse text-center">
+                    <p>Descubra uma ampla gama de serviços de classe mundial que irão transformar a sua estadia em uma experiência verdadeiramente memorável. Desde relaxar à beira da nossa deslumbrante piscina de borda infinita até desfrutar de tratamentos de spa rejuvenescedores, oferecemos tudo o que precisa para uma fuga perfeita. Mime-se com cocktails no nosso elegante bar lounge, explore as águas cristalinas em emocionantes viagens de barco ou delicie-se com a culinária requintada nos nossos restaurantes. Além disso, oferecemos relaxantes massagens, bilhetes para eventos emocionantes e trilhas pitorescas para os amantes da natureza. A sua experiência de luxo começa aqui.</p>
                 </div>
             </div>
         </div>
     </div>
-    <!-- ##### Book Now Area End ##### -->
+</section>
+<!-- ##### Service Intro Area End ##### -->
 
-    <!-- ##### Service Intro Area Start ##### -->
-    <section class="services-intro">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Service Intro Text -->
-                <div class="col-12 col-lg-6">
-                    <div class="service-intro-text mb-100">
-                        <div class="section-heading">
-                            <div class="line-"></div>
-                            <h2>Amazing Services</h2>
-                        </div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus.</p>
-                        <a href="#" class="btn palatin-btn mt-50">Read More</a>
-                    </div>
-                </div>
+<!-- ##### Service Intro Area Start ##### -->
+<div class="container-fluid">
+    <div class="row no-gutters">
+        <!-- Coluna da Esquerda para Imagem do Serviço 1 -->
+        <div class="col-lg-6">
+            <img src="img/bg-img/barpiscina.jpg" alt="Bar da piscina" class="img-fluid service-img">
 
-                <!-- Services Features -->
-                <div class="col-12 col-lg-6">
-                    <div class="row mb-100">
 
-                        <!-- Single Cool Facts -->
-                        <div class="col-12 col-sm-4">
-                            <div class="single-cool-fact">
-                                <div class="scf-text">
-                                    <i class="icon-cocktail-1"></i>
-                                    <p>Pool Beachbar</p>
-                                </div>
-                            </div>
-                        </div>
+        </div>
 
-                        <!-- Single Cool Facts -->
-                        <div class="col-12 col-sm-4">
-                            <div class="single-cool-fact">
-                                <div class="scf-text">
-                                    <i class="icon-swimming-pool"></i>
-                                    <p>Infinity Pool</p>
-                                </div>
-                            </div>
-                        </div>
+        <!-- Coluna da Direita para Texto do Serviço 1 -->
+        <div class="col-lg-6">
+            <div class="service-intro-text mt-3">
+                <h2>Bar da Piscina</h2>
+                <p>Desfrute de um refúgio de relaxamento à beira da piscina no nosso hotel. O nosso bar da piscina oferece cocktails refrescantes, lanches saborosos e um ambiente descontraído. Relaxe nas espreguiçadeiras, mergulhe na piscina e saboreie deliciosas bebidas enquanto desfruta do sol. Com vistas deslumbrantes e um serviço atencioso, o nosso bar da piscina é o lugar perfeito para relaxar e desfrutar de momentos memoráveis durante a sua estadia.</p>
+                <!-- Mais conteúdo de texto conforme necessário -->
+            </div>
+        </div>
+    </div>
 
-                        <!-- Single Cool Facts -->
-                        <div class="col-12 col-sm-4">
-                            <div class="single-cool-fact">
-                                <div class="scf-text">
-                                    <i class="icon-beach"></i>
-                                    <p>Sunbeds</p>
-                                </div>
-                            </div>
-                        </div>
+    <!-- Repita o padrão para mais serviços -->
+    <div class="row no-gutters">
+        <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+        <div class="col-lg-6">
+            <img src="img/bg-img/piscina_infinita.avif" class="img-fluid service-img">
+        </div>
 
-                    </div>
+        <!-- Coluna da Direita para Texto do Serviço 2 -->
+        <div class="col-lg-6">
+            <div class="service-intro-text">
+                <h2>Infinity Pool</h2>
+                <p>A nossa Infinity Pool é um oásis de tranquilidade e beleza. Com vistas panorâmicas e deslumbrantes que se estendem até onde os olhos podem ver, esta piscina é verdadeiramente única. A água cristalina parece fundir-se com o horizonte, criando uma sensação de infinito e liberdade. Mergulhe na serenidade, relaxe nas espreguiçadeiras à beira da piscina e deixe-se levar pela beleza natural que a rodeia. A nossa Infinity Pool é o local perfeito para descontrair e apreciar momentos de pura indulgência.</p>
+                <!-- Mais conteúdo de texto conforme necessário -->
+            </div>
+        </div>
+    </div>
+    <!-- Continuar adicionando pares de colunas para cada serviço -->
+
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/sunbed.avif" class="img-fluid service-img">
+            </div>
+    
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Espreguiçadeiras</h2>
+                    <p>Desfrute de puro luxo e relaxamento à beira da piscina do nosso hotel. As nossas espreguiçadeiras cuidadosamente selecionadas oferecem o cenário perfeito para descontrair enquanto saboreia um cocktail exclusivo. Com designs elegantes e almofadados macios, as nossas espreguiçadeiras garantem um conforto incomparável enquanto você se bronzeia sobre o sol radiante. Sinta o toque de classe à beira da nossa piscina de borda infinita, com vista para paisagens deslumbrantes. Mime-se com serviço de garçom personalizado, toalhas felpudas e um refúgio tranquilo que é simplesmente inigualável. No nosso hotel, as espreguiçadeiras transformam a beira da piscina em um oásis de serenidade e sofisticação.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
                 </div>
             </div>
         </div>
-    </section>
-    <!-- ##### Service Intro Area End ##### -->
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
 
-    <!-- ##### Core Features Start ##### -->
-    <section class="core-features-area">
-        <div class="container">
-            <div class="row justify-content-center">
 
-                <!-- Single Core Feature Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-core-feature mb-100">
-                        <div class="bg-thumbnail bg-img" style="background-image: url(img/bg-img/12.jpg);"></div>
-                        <!-- Content -->
-                        <div class="feature-content">
-                            <i class="icon-sunset"></i>
-                            <h3>Wellness</h3>
-                            <p>Malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus. faucibus finibus.</p>
-                        </div>
-                    </div>
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/spa.avif" class="img-fluid service-img">
+            </div>
+    
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Spa</h2>
+                    <p>Descubra um oásis de tranquilidade no nosso spa de classe mundial, onde pode rejuvenescer o corpo e a mente. Mime-se com uma variedade de tratamentos de spa luxuosos, entre eles tratamentos de beleza revitalizantes. A nossa equipa de terapeutas altamente qualificados garantirá que a sua experiência seja inesquecível. Relaxe em instalações de spa elegantes e desfrute de um refúgio cheio de calma e rejuvenescimento.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
                 </div>
-
-                <!-- Single Core Feature Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-core-feature mb-100">
-                        <div class="bg-thumbnail bg-img" style="background-image: url(img/bg-img/13.jpg);"></div>
-                        <!-- Content -->
-                        <div class="feature-content">
-                            <i class="icon-sunset"></i>
-                            <h3>Spa Center</h3>
-                            <p>Malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus. faucibus finibus.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Core Feature Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-core-feature mb-100">
-                        <div class="bg-thumbnail bg-img" style="background-image: url(img/bg-img/14.jpg);"></div>
-                        <!-- Content -->
-                        <div class="feature-content">
-                            <i class="icon-island"></i>
-                            <h3>Lounge Bar</h3>
-                            <p>Malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus. faucibus finibus.</p>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
-    <!-- ##### Core Features End ##### -->
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/ioga.avif" alt="Relaxe com uma sessão de ioga" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
 
-    <!-- ##### Services Area Start ##### -->
-    <section class="services-area">
+                    <div class="service-intro-text">
+                    <h2>Bem-Estar</h2>
+                    <p>A nossa secção de bem-estar oferece um ambiente sereno e revigorante, perfeito para aqueles que procuram equilíbrio e harmonia. Aqui, pode participar em aulas de ioga revitalizantes, sessões de meditação guiada e programas de fitness personalizados. Desfrute de uma piscina de água salgada, saunas de última geração e espaços de relaxamento tranquilo. Cuide de si e da sua saúde no nosso centro de bem-estar, onde o seu bem-estar é a nossa prioridade.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/bar_lounge.avif" alt="O nosso Bar Lounge tem sempre o ambiente mais sofisticado" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Bar Lounge</h2>
+                    <p>Desfrute de momentos inesquecíveis no nosso elegante Bar Lounge, o local perfeito para relaxar e socializar. Com uma atmosfera sofisticada e vistas deslumbrantes, o nosso lounge oferece uma vasta seleção de bebidas premium, cocktials artesanais e vinhos requintados. Deixe-se levar pela música suave e ambiente acolhedor enquanto desfruta de conversas animadas com amigos ou colegas. Com serviço impecável e uma ementa de petiscos refinados, o nosso Bar Lounge é o cenário ideal para relaxar após um longo dia ou para celebrar momentos especiais. Venha saborear a vida com estilo no nosso Bar Lounge.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/viagens_barco.avif" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Viagens de Barco</h2>
+                    <p>Explore as águas cristalinas das Maldivas com as nossas emocionantes viagens de barco. Oferecemos uma variedade de passeios de barco cuidadosamente planeados para garantir que você experimente o melhor das Maldivas. Os nossos barcos confortáveis e tripulações experientes estão prontos para levá-lo a destinos incríveis, como ilhas locais pitorescas, recifes de coral deslumbrantes e pontos de mergulho de classe mundial. Desfrute de um passeio relaxante ao pôr do sol, uma emocionante aventura de observação de golfinhos ou até mesmo uma experiência de pesca inesquecível. Com as nossas viagens de barco, você terá a oportunidade de explorar a beleza natural única das Maldivas de uma forma autêntica e memorável. Prepare-se para criar lembranças incríveis enquanto navega pelas águas paradisíacas deste destino extraordinário.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/restaurante.avif" alt="Disfrute das iguarias locais" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Restaurantes</h2>
+                    <p>Desfrute de uma experiência culinária excepcional nos nossos restaurantes exclusivos nas Maldivas. Oferecemos uma variedade de opções gastronómicas para satisfazer todos os paladares. Os nossos chefs talentosos preparam pratos requintados que combinam sabores locais frescos com cozinha internacional de classe mundial. Quer deseje saborear mariscos frescos à beira-mar, desfrutar de um jantar romântico à luz das velas ou experimentar iguarias locais autênticas, os nossos restaurantes oferecem um ambiente acolhedor e serviço de alta qualidade. Delicie-se com pratos gourmet, desfrute de cocktails exóticos e mergulhe na atmosfera única dos nossos restaurantes. Com vistas deslumbrantes e uma experiência gastronómica de primeira classe, os nossos restaurantes tornarão a sua estadia nas Maldivas verdadeiramente memorável.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/massagem.avif" alt="Receba o relaxamento que merece com o nosso serviço de massagens de qualidade" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Massagens</h2>
+                    <p>Relaxe e rejuvenesça no nosso luxuoso spa nas Maldivas. Oferecemos uma variedade de tratamentos de massagens que promovem o bem-estar, aliviam o stress e revigoram o corpo e a mente. Os nossos terapeutas altamente treinados utilizam técnicas terapêuticas e óleos essenciais de alta qualidade para proporcionar uma experiência de massagem verdadeiramente relaxante. Desde massagens suecas para aliviar a tensão muscular até massagens com pedras quentes para um profundo relaxamento, temos opções para todos os gostos. Mime-se com uma massagem à beira-mar para uma sensação de tranquilidade total ou opte por uma massagem de casal para uma experiência romântica. No nosso spa, o seu conforto e relaxamento são a nossa prioridade. Deixe as preocupações para trás e entregue-se a momentos de pura indulgência e rejuvenescimento.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/eventos.avif" alt="O nossos eventos são experiências inesquecíveis" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Bilhetes para Eventos</h2>
+                    <p>Desfrute de experiências exclusivas durante a sua estadia nas Maldivas ao adquirir bilhetes para eventos emocionantes. Oferecemos acesso a uma variedade de eventos especiais, desde espetáculos culturais e festivais locais até eventos desportivos e espetáculos ao vivo. Esta é a oportunidade perfeita para mergulhar na cultura e no entretenimento da região, criando memórias inesquecíveis durante a sua viagem. Garanta os seus bilhetes para eventos conosco e aproveite ao máximo a sua estadia no paraíso das Maldivas.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+<!-- ##### Service Intro Area End ##### -->
+        <!-- Repita o padrão para mais serviços -->
+        <div class="row no-gutters">
+            <!-- Coluna da Esquerda para Imagem do Serviço 2 -->
+            <div class="col-lg-6">
+                <img src="img/bg-img/caminhadas.avif" class="img-fluid service-img">
+            </div>
+            <!-- Coluna da Direita para Texto do Serviço 2 -->
+            <div class="col-lg-6">
+                <div class="service-intro-text">
+                    <h2>Caminhadas</h2>
+                    <p>Explore a beleza natural das Maldivas através das nossas emocionantes trilhas e caminhadas guiadas. Os nossos experientes guias locais o levarão em jornadas fascinantes através de paisagens deslumbrantes, proporcionando a oportunidade de conhecer a flora e fauna únicas da região. Caminhe pelas praias intocadas, descubra trilhas exuberantes e mergulhe na natureza intocada das ilhas. Seja você um amante da natureza ou um aventureiro em busca de novas descobertas, as caminhadas nas Maldivas oferecem uma experiência única e inesquecível em meio a um cenário paradisíaco.</p>
+                    <!-- Mais conteúdo de texto conforme necessário -->
+                </div>
+            </div>
+        </div>
+</div>
+<div class="clear-section" style="width: 100%; height: 50px;"></div>
+<!-- ##### Service Intro Area End ##### -->
+
+       <!-- Inicio do rodapé -->
+       <footer class="footer-area">
         <div class="container">
             <div class="row">
 
-                <!-- Single Service Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="100ms">
-                        <i class="icon-trekking"></i>
-                        <h4>Bike Rentals</h4>
-                        <p>Nulla massa dui, posuere non erat in, eleifend mattis dui. Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus iaculis. Mauris odio tortor.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="200ms">
-                        <i class="icon-boat"></i>
-                        <h4>Boat Trips</h4>
-                        <p>Nulla massa dui, posuere non erat in, eleifend mattis dui. Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus iaculis. Mauris odio tortor.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="300ms">
-                        <i class="icon-restaurant"></i>
-                        <h4>Restaurants</h4>
-                        <p>Nulla massa dui, posuere non erat in, eleifend mattis dui. Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus iaculis. Mauris odio tortor.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="400ms">
-                        <i class="icon-beach"></i>
-                        <h4>Massages</h4>
-                        <p>Nulla massa dui, posuere non erat in, eleifend mattis dui. Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus iaculis. Mauris odio tortor.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="500ms">
-                        <i class="icon-boarding-pass"></i>
-                        <h4>Event Tikets</h4>
-                        <p>Nulla massa dui, posuere non erat in, eleifend mattis dui. Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus iaculis. Mauris odio tortor.</p>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-sm-6 col-lg-4">
-                    <div class="single-service-area mb-100 wow fadeInUp" data-wow-delay="600ms">
-                        <i class="icon-sign"></i>
-                        <h4>Hiking</h4>
-                        <p>Nulla massa dui, posuere non erat in, eleifend mattis dui. Vivamus luctus luctus rhoncus. Donec sagittis nulla id finibus iaculis. Mauris odio tortor.</p>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ##### Services Area End ##### -->
-
-    <!-- ##### Footer Area Start ##### -->
-    <footer class="footer-area">
-        <div class="container">
-            <div class="row">
-
-                <!-- Footer Widget Area -->
+                <!-- Rodapé slogan -->
                 <div class="col-12 col-lg-5">
-                    <div class="footer-widget-area mt-50">
+                    <div class="footer-widget-area mt-">
                         <a href="#" class="d-block mb-5"><img src="img/core-img/logo.png" alt=""></a>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada lorem maximus mauris sceleri sque, at rutrum nulla dictum. Ut ac ligula sapien. Suspendisse cursus faucibus finibus. </p>
+                        <p> Onde o Luxo Abraça a Natureza, Criando Memórias Inesquecíveis.</p>
                     </div>
                 </div>
 
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <!-- Rodapé mapa -->
+                <div class="col-12 col-md-7 col-lg-5">
                     <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Find us on the map</h6>
+                        <h6 class="widget-title mb-5">Encontre-nos no mapa. Estamos aqui!</h6>
                         <img src="img/bg-img/footer-map.png" alt="">
                     </div>
                 </div>
 
-                <!-- Footer Widget Area -->
-                <div class="col-12 col-md-6 col-lg-3">
-                    <div class="footer-widget-area mt-50">
-                        <h6 class="widget-title mb-5">Subscribe to our newsletter</h6>
-                        <form action="#" method="post" class="subscribe-form">
-                            <input type="email" name="subscribe-email" id="subscribeemail" placeholder="Your E-mail">
-                            <button type="submit">Subscribe</button>
-                        </form>
-                    </div>
-                </div>
 
                 <!-- Copywrite Text -->
                 <div class="col-12">
@@ -420,17 +433,40 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
     </footer>
     <!-- ##### Footer Area End ##### -->
 
-    <!-- ##### All Javascript Script ##### -->
-    <!-- jQuery-2.2.4 js -->
-    <script src="js/jquery/jquery-2.2.4.min.js"></script>
-    <!-- Popper js -->
-    <script src="js/bootstrap/popper.min.js"></script>
-    <!-- Bootstrap js -->
-    <script src="js/bootstrap/bootstrap.min.js"></script>
-    <!-- All Plugins js -->
-    <script src="js/plugins/plugins.js"></script>
-    <!-- Active js -->
-    <script src="js/active.js"></script>
-</body>
+        <!-- ##### All Javascript Script ##### -->
 
-</html>
+
+
+        <!-- Popper js -->
+        <script src="js/bootstrap/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="js/bootstrap/bootstrap.min.js"></script>
+        <!-- All Plugins js -->
+        <script src="js/plugins/plugins.js"></script>
+        <!-- Active js -->
+        <script src="js/active.js"></script>
+
+
+
+
+<script>
+$(document).ready(function() {
+    // Botão 'Read More' com efeito cascata
+    $('#read-more-btn').click(function(e) {
+        e.preventDefault();
+        var textSection = $('#amazing-services-text');
+        
+        // Se o texto estiver escondido, mostramos com efeito cascata
+        if (textSection.is(':hidden')) {
+            textSection.slideDown('slow');
+        } else { // Se o texto estiver visível, escondemos
+            textSection.slideUp('slow');
+        }
+    });
+});
+
+</script>
+
+    </body>
+
+    </html>

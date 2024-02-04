@@ -88,9 +88,7 @@
                                             <li><a href="rooms.html">Quartos </a></li>
                                             <li><a href="gastronomia.html"> Gastronomia </a></li>
                                         </ul>
-                                    </li>
-                                    <li><a href="blog.html">Atividades</a>
-                               
+                                    </li>                               
                                     <li><a href="services.html">Serviços</a></li>
                                 </ul>
                             </div>
@@ -127,7 +125,7 @@
                     <div class="section-heading text-center">
                         <div class="line-"></div>
                         <h2>Formulário de Reserva</h2>
-                        <form>
+                        <form id="formulario-reserva">
                             <div class="formulario-reservas">
                                 
                                     <!--Nome Completo-->
@@ -144,11 +142,13 @@
                                     <input type="tel" class="form-control" id="tel" name="tel" required>
 
                                     <!-- Datas de Reserva -->
-                                        <h4 class="m-4">Datas de Reserva</h4>
-                                        <label for="checkin">Data de Check-in</label>
-                                        <input type="date" class="form-control" id="checkin" name="checkin" required>
-                                        <label for="checkout">Data de Check-out</label>
-                                        <input type="date" class="form-control" id="checkout" name="checkout" required>
+                                    <h4 class="m-4">Datas de Reserva</h4>
+                                    <label for="checkin">Data de Check-in</label>
+                                    <input type="date" class="form-control" id="checkin" name="checkin" min="2024-01-01" max="2024-12-31" required>
+                                    <label for="checkout">Data de Check-out</label>
+                                    <input type="date" class="form-control" id="checkout" name="checkout" min="2024-01-01" max="2024-12-31" required>
+                               
+                                    
 
                                     <!--Adultos e Crianças-->
                                     <h4 class="m-4">Hóspedes</h4>
@@ -192,9 +192,9 @@
                                         </div>
                                       </div>
 
-                                        <div>
-                                            <button id="botao-reserva" class="btn-lg m-5" type="submit">Simular Preço</button>
-                                        </div>
+                                      <div class="text-center"> <!-- Adicione esta div para envolver o botão -->
+                                        <button id="botao-reserva" class="btn-lg" type="submit">Simular Preço</button>
+                                    </div>
                                             <div id="priceTable" class="d-none"></div>
                                             <button id="finalizarReservaBtn" class="btn bg-primary m-5" style="display: none;">Finalizar Reserva</button>
 

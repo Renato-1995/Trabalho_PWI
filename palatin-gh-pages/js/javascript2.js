@@ -73,65 +73,65 @@ window.onload = function () {
     }
   }
 
-  function adicionarReservaATabela(reserva) {
-    const tabela = document.getElementById("GestaoTable");
+// Adicionar a reserva à tabela
+function adicionarReservaATabela(reserva) {
+  const tabela = document.getElementById("GestaoTable");
 
-    // Certifique-se de que a tabela existe
-    if (!tabela) {
-        console.error("Tabela não encontrada.");
-        return;
-    }
+  // Certifique-se de que a tabela existe
+  if (!tabela) {
+      console.error("Tabela não encontrada.");
+      return;
+  }
 
-    let tbody = tabela.querySelector("tbody");
+  let tbody = tabela.querySelector("tbody");
 
-    // Se tbody não existir, crie-o
-    if (!tbody) {
-        console.error("Tbody não encontrado. Criando um novo tbody.");
-        tbody = document.createElement("tbody");
-        tabela.appendChild(tbody);
-    }
+  // Se tbody não existir, crie-o
+  if (!tbody) {
+      console.error("Tbody não encontrado. Criando um novo tbody.");
+      tbody = document.createElement("tbody");
+      tabela.appendChild(tbody);
+  }
 
-    // Adicione as células com os dados da reserva
-    const novaLinha = tbody.insertRow(tbody.rows.length);
+  // Adicione as células com os dados da reserva
+  const novaLinha = tbody.insertRow(tbody.rows.length);
 
-    // Células para os dados da reserva
-    const celulas = [
-        reserva.numero,
-        reserva.nome,
-        reserva.email,
-        reserva.tel,
-        reserva.checkin,
-        reserva.checkout,
-        reserva.adultos,
-        reserva.criancas,
-        reserva.tipoSuite,
-        reserva.tipoVilla,
-    ];
+  // Células para os dados da reserva
+  const celulas = [
+      reserva.numero,
+      reserva.nome,
+      reserva.email,
+      reserva.tel,
+      reserva.checkin,
+      reserva.checkout,
+      reserva.adultos,
+      reserva.criancas,
+      reserva.tipoSuite,
+      reserva.tipoVilla,
+  ];
 
-    // Adicione as células de dados da reserva à linha
-    for (let i = 0; i < celulas.length; i++) {
-        const celula = novaLinha.insertCell(i);
-        celula.innerHTML = celulas[i];
-    }
+  // Adicione as células de dados da reserva à linha
+  for (let i = 0; i < celulas.length; i++) {
+      const celula = novaLinha.insertCell(i);
+      celula.innerHTML = celulas[i];
+  }
 
-    // Célula para o preço
-    const precoCell = novaLinha.insertCell(celulas.length);
-    precoCell.innerHTML =
-        (precoquartos(reserva.tipoSuite) || precoquartos(reserva.tipoVilla)) *
-        dias(reserva.checkin, reserva.checkout).toFixed(2) + "€";
+  // Célula para o preço
+  const precoCell = novaLinha.insertCell(celulas.length);
+  precoCell.innerHTML =
+      (precoquartos(reserva.tipoSuite) || precoquartos(reserva.tipoVilla)) *
+      dias(reserva.checkin, reserva.checkout).toFixed(2) + "€";
 
-    // Célula para o botão de cancelamento
-    const botaoCancelar = document.createElement("button");
-    botaoCancelar.className = "btn btn-danger cancelar-btn";
-    botaoCancelar.textContent = "Cancelar";
-    botaoCancelar.onclick = function () {
-        cancelarReserva(reserva);
-    };
+  // Célula para o botão de cancelamento
+  const botaoCancelar = document.createElement("button");
+  botaoCancelar.className = "btn btn-danger cancelar-btn";
+  botaoCancelar.textContent = "Cancelar";
+  botaoCancelar.onclick = function () {
+      cancelarReserva(reserva);
+  };
 
-    const cancelarCell = novaLinha.insertCell(celulas.length + 1);
-    cancelarCell.appendChild(botaoCancelar);
+  const cancelarCell = novaLinha.insertCell(celulas.length + 1);
+  cancelarCell.appendChild(botaoCancelar);
 }
-
 
   //Reservas em sistema
   const reservaFicticia1 = {
@@ -164,7 +164,22 @@ window.onload = function () {
 
   adicionarReservaATabela(reservaFicticia2);
 
-  reservas.push(reservaFicticia1, reservaFicticia2);
+  const reservaFicticia3 = {
+    numero: reservas.length + 3,
+    nome: "Manuel Serra",
+    email: "serra@serra.com",
+    tel: "912343378",
+    checkin: "2024-03-06",
+    checkout: "2024-03-08",
+    adultos: 2,
+    criancas: 1,
+    tipoSuite: "suiteSingle",
+    tipoVilla: "NoVilla",
+  };
+
+  adicionarReservaATabela(reservaFicticia3);
+
+  reservas.push(reservaFicticia1, reservaFicticia2, reservaFicticia3);
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();
